@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Etsy Searcher</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="/etsy.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="etsy_search" class="form-inline text-center m-b-10" role="form" onsubmit="return search();">
+        <div class="form-group">
+          <label>search criteria</label>
+          <input id="etsy_criteria" class="form-control" placeholder="search criteria" size="32">
+        </div>
+        <button type="submit" class="btn btn-default" onclick="search()">Search!</button>
+      </form>
+      <div id="etsy_images"></div>
+      <div id="etsy_errors" class="hidden"></div>
+      <ul id="pager" class="pager">
+        <li><a id="pre">Prev</a></li>
+        <li><a id="nxt">Next</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
+
